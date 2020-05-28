@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const gravatar = require('gravatar');
 const { check, validationResult } = require('express-validator');
 
 const User = require('../../ models/User');
@@ -36,7 +37,21 @@ router.post(
       }
 
       // Get users gravatar
+      const avatar = gravatar.url(email, {
+        size: '200',
+        rating: 'pg',
+        default: 'mm',
+      });
+
+      user = new User({
+        name,
+        email,
+        avatar,
+        password,
+      });
+
       // Encript password
+
       // Return jsonwebtoken
 
       res.send('User route');
