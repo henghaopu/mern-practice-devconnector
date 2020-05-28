@@ -29,4 +29,4 @@ const UserSchema = new mongoose.Schema({
  * @param {Schema} mongoose.Schema
  * @returns {class}
  */
-module.exports = User = mogoose.model('user', UserSchema);
+module.exports = User = mongoose.model('user', UserSchema);
