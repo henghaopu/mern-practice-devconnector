@@ -7,6 +7,10 @@ connectDB();
 
 const PORT = process.env.PORT || 5000;
 
+// Initialize the middleware for the body parser
+// Allow routers to get data from req.body
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('API running'));
 
 // Mount/connect routers to their own specific uri/path/endpoint
