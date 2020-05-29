@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://henghaopu720:henghaopu720@devconnector-o5umr.mongodb.net/test?retryWrites=true&w=majority",
+  "privateKey": "mysecretkey"
+}
